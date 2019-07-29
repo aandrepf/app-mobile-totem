@@ -1,0 +1,28 @@
+<ngx-spinner class="gerente-wait-info" bdColor="rgba(255,255,255,1)" size="medium" color="#cd0a2f" type="ball-clip-rotate" fullscreen="true">
+  <p class='gerente-wait-text' style="color: #cd0a2f">atualizando informações...</p>
+</ngx-spinner>
+<div class="page-header" data-pg="print" style="width: 100%;display: block;float: left;padding: 45px 30px;margin-bottom:20px;"></div>
+<div class="sub-page-header"
+[style.color]="codigoCategoria === 8 || codigoCategoria === 17 ? '#070707': 'inherit'">
+  <p class="back-btn"><i class="fa fa-chevron-left" aria-hidden="true" (click)="goBack()"></i></p>
+  <p class="sub-titulo">POR QUAL GERENTE <br>DESEJA SER ATENDIDO(A)?</p>
+</div>
+<div class="row" *ngFor="let item of gerente">
+  <div class="col col-12 categorias-infos" (click)="confirmaGerente(item.id)">
+    <mat-card
+      [class]="codigoCategoria === 8 || codigoCategoria === 17 ? 'example-card-prime mat-card': 'example-card mat-card'"
+      class="example-card mat-card">
+      <mat-card-content>
+        <div class="row">
+          <div class="col col-3 col-details">
+            <i class="fa fa-user-circle" aria-hidden="true"
+            [style.color]="codigoCategoria === 8 || codigoCategoria === 17 ? '#ffffff': '#cd0a2f'"></i>
+          </div>
+          <div class="col col-9 col-categoria">
+            <p>{{ item.nome }}</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

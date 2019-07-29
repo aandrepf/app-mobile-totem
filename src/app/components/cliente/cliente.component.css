@@ -1,0 +1,107 @@
+.page-header {
+  width: 92%;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: block;
+  float: left;
+  margin: 135px 30px 0;
+  text-align: left;
+}
+.page-header img.icon-voltar {
+  float: right;
+  position: absolute;
+  top: 12px;
+  right: 28px;
+  width: 160px;
+}
+p.titulo-pagina {
+  margin: 0;
+  font-family: gilroyR;
+  *font-size: 60pt;
+  line-height: 78pt;
+  text-transform: uppercase;
+  display: inline;
+}
+p.titulo-prioritario {
+  display: inline;
+}
+img {
+  width: 20%;
+  position: relative;
+  top: -25px;
+  right: -45px;
+}
+.card {
+  border: 0px dotted #fff!important;
+  background-color: transparent!important;
+  margin: 32px auto 0px;
+}
+.cliente-usr-interaction {
+  margin: 70px 0 0;
+  padding: 0;
+}
+button.btn-brand-continue {
+  min-width: 92%;
+  min-height: 170px;
+  box-shadow: none!important;
+  outline:none!important;
+  padding: 0 40px 0;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 0px!important;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+  text-align: left;
+  color: #cd0a2f !important;
+  font-family: gilroyB;
+  background-color: #ffffff!important;
+  border-color: #ffffff!important;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 96% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 96% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px)
+{
+  .page-header {padding: 0 45px;}
+}
+
+/* LARGE DESKTOPS  */
+@media (max-width: 1366px) {
+  .cliente-usr-interaction {padding: 0 15px;}
+}
+
+/* SMALL DESKTOPS AND TABLETS LANDSCAPE  */
+@media (max-width: 1199px) {
+  .cliente-usr-interaction {margin-top: 50px;}
+  button.btn-brand-continue{min-height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+  }
+  p.no-identification {font-size: 35px;line-height: 37px;}
+}
+
+/* TABLETS AND IPADS  */
+@media (max-width: 991px) {
+  .cliente-usr-interaction {margin: 23px 0 0;}
+  button.btn-brand-continue{
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+  }
+}
+
+/* SMALL TABLETS AND SMARTPHONES LANDSCAPE  */
+@media (max-width: 767px) {
+  .cliente-usr-interaction {margin-top: 40px;}
+}
+
+/* SMARTPHONES PORTRAIT AND IPHONES  */
+@media (max-width: 599px) {
+  .page-header {margin: 0 24px;}
+  .cliente-usr-interaction {margin-top: 20px;}
+  button.btn-brand-continue{min-width: 92%;min-height: 75px;font-size: 25px;line-height: 27px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 87% 100%, 0% 100%);
+    margin: 0 auto 15px;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "agencia": [
+    {
+      "id": 1,
+      "codAgencia": "1382",
+      "nomeAgencia": "Agencia Prime Alphaville",
+      "endereco": "Alameda Rio Negro"
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "name": "André Figueiredo",
+      "cpf": "013.210.473-39",
+      "ag": "1382",
+      "conta": "407305",
+      "idGerente": 1,
+      "nomeGerente": "José da Silva",
+      "nomeSegmento": "Bradesco Exclusive",
+      "idCategoria": 12,
+      "btn": 22
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.erro-agencia-identify {
+  margin-top: 120px;
+}
+.erro-agencia-identify h1 {
+  color: #cd0a2f;
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.erro-agencia-identify p {
+  color: #cd0a2f;
+  font-size: 2.0rem;
+  line-height: 2.8rem;
+  margin-bottom: 60px;
+}
+button.tentar-btn {
+  padding: 25px 20px;
+  font-size: 1.8rem;
+  color: #fff!important;
+  background-color: #cd0a2f;
+}

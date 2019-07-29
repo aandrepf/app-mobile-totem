@@ -1,0 +1,94 @@
+.row {
+  margin: 0 20px;
+}
+.page-header {
+  width: 92%;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: block;
+  margin: 65px 30px 0;
+  text-align: left;
+}
+.page-header img.icon-voltar {
+  float: right;
+  position: relative;
+  top: -60px;
+  right: -30px;
+  width: 160px;
+}
+img.categoria-brand.brand-classic {
+  top: 12px;
+}
+img.categoria-brand.brand-prime {
+  width: 42%;
+}
+img.categoria-brand.brand-pj {
+  width: 70%;
+}
+p.titulo-pagina {
+  margin: 0;
+  font-family: gilroyR;
+  *font-size: 60pt;
+  line-height: 78pt;
+  text-transform: uppercase;
+  display: inline;
+}
+p.titulo-prioritario {
+  display: inline;
+}
+img.categoria-brand {
+  width: 50%;
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 30px 0 40px;
+}
+.categorias-lista {
+  margin: 90px 0 0;
+}
+.info-lista-gerente p {
+  font-family: gilroyB;
+  margin: 0 20px 40px;
+  font-size: 51px;
+  line-height: 55px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  text-align: left;
+}
+.categorias-infos {
+  margin: 0 0 30px;
+}
+.col-categoria p {
+  margin: 0;
+  line-height: 40px;
+  font-size: 17px;
+  text-align: left;
+}
+.col-details i {
+  line-height: 40px;
+  font-size: 35px;
+  float: right;
+  color: #ccc;
+  position: relative;
+  top: 32%;
+}
+.col.col-9.col-categoria, .col.col-3.col-details {
+  padding: 0;
+}
+mat-card.example-card.mat-card.mat-card {
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 90% 100%, 0% 100%);
+  border-radius: 0;
+  height: 190px;
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px)
+{
+  .page-header {margin-top: 135px;}
+  img.categoria-brand {width: 18%;}
+  img.categoria-brand.brand-prime {width: 14%;}
+  img.categoria-brand.brand-pj {width: 25%;}
+  .page-header img.icon-voltar {top: -120px;right: -150px;}
+  mat-card.example-card.mat-card.mat-card[_ngcontent-c15] {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 97% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 97% 100%, 0% 100%);}
+}

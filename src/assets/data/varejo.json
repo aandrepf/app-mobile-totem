@@ -1,0 +1,110 @@
+{
+	"InterfaceEmissorPagina": [
+    {
+      "BtnVoltar": true,
+      "Descr": "Página Caixa",
+      "IconePrioritario": false,
+      "Id": 2,
+      "InterfaceEmissorBotao": [
+        {
+          "DescLocalAtendimento": "CAIXA",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 5,
+          "IdBotao": 1,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "btn_branco.png",
+          "TamanhoBotao": 19,
+          "TextoBotao": "Pagamentos e Recebimentos",
+          "TipoBotao": 3
+        },
+        {
+          "DescLocalAtendimento": "CAIXA",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 6,
+          "IdBotao": 3,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "btn_prime.png",
+          "TamanhoBotao": 14,
+          "TextoBotao": "Caixa Prime ",
+          "TipoBotao": 3
+        },
+        {
+          "DescLocalAtendimento": "CAIXA",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 7,
+          "IdBotao": 4,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "btn_exclusive.png",
+          "TamanhoBotao": 14,
+          "TextoBotao": "Caixa Exclusive ",
+          "TipoBotao": 3
+        },
+        {
+          "DescLocalAtendimento": "CAIXA",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 8,
+          "IdBotao": 9,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "btn_branco.png",
+          "TamanhoBotao": 14,
+          "TextoBotao": "Retirada de, Cartão de Débito, Cheque Devolvido, Talão de Cheque",
+          "TipoBotao": 3
+        }
+      ],
+      "InterfaceEmissorLink": [
+        {
+          "Descr": "Link para páginas de caixa prioritário",
+          "IconePrioritario": true,
+          "Id": 3,
+          "IdEmissorPagina": 2,
+          "IdEmissorPaginasDestino": 3,
+          "InterfaceEmissorTituloLink": [
+            {
+              "Id": 12,
+              "IdEmissorPagina": 2,
+              "IdLink": 3,
+              "Negrito": false,
+              "PosicaoTexto": 2,
+              "TamanhoFonte": 14,
+              "TextoLink": "Atendimentos Prioritários"
+            }
+          ],
+          "TamanhoBotaolink": 14,
+          "TipoBotao": 2
+        }
+      ],
+      "InterfaceEmissorTituloLink": [
+        {
+          "Id": 12,
+          "IdEmissorPagina": 2,
+          "IdLink": 3,
+          "Negrito": false,
+          "PosicaoTexto": 2,
+          "TamanhoFonte": 14,
+          "TextoLink": "Atendimentos Prioritários"
+        }
+      ],
+      "InterfaceEmissorTituloPagina": [
+        {
+          "Id": 3,
+          "IdEmissorPagina": 2,
+          "Negrito": false,
+          "PosicaoTexto": 2,
+          "TamanhoFonte": 44,
+          "TextoPagina": "Caixa"
+        }
+      ],
+      "MsgExtra": "<div style=font-size:10px;line-height:11px;>\u000d\u000a  <p>Confira as opções de atendimento que o Banco preparou para você:<\/p>\u000d\u000a  <p><b>Correntistas:<\/b><\/p>\u000d\u000a  <p>- Débito Automático - Autoatendimento - Internet Banking - Bradesco Celular - DDA - Fone Fácil - Bradesco Expresso<\/p>\u000d\u000a  <p><b>Não Correntistas:<\/b><\/p>\u000d\u000a  <p>- Bradesco Expresso (Veja a relação na Agência) - Use o Autoatendimento para pagamento   com cartões de outros Bancos<\/p>\u000d\u000a<\/div>"
+    }
+  ],
+	"retcode": 0,
+	"retmsg": ""
+}

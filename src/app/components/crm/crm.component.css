@@ -1,0 +1,97 @@
+.page-header {
+  width: 92%;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: block;
+  float: left;
+  margin: 155px 30px 0;
+  text-align: left;
+}
+.page-header img.icon-voltar {
+  float: right;
+  position: absolute;
+  top: 12px;
+  right: 28px;
+  width: 160px;
+}
+p.titulo-pagina {
+  margin: 0;
+  font-family: gilroyR;
+  font-size: 75pt;
+  line-height: 78pt;
+  text-transform: uppercase;
+
+}
+p.sub-titulo {
+  margin: 25px 0;
+  font-family: gilroyR;
+  font-size: 37pt;
+  line-height: 50pt;
+}
+.bond-form {
+  width: 100%;
+  font-size: 16pt !important;
+  padding: 5px 30px;
+  display: block;
+  float: left;
+  margin: 10px 0 0;
+}
+
+.bond-full-width {
+  width: 100%;
+}
+
+input.input-ag, input.input-cc {
+  width: 100%;
+  padding: 16px 5px;
+  margin: 55px 0 34px;
+  background: transparent;
+  color: transparent;
+  text-shadow: 0 0 0 #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  outline: none;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 0.8; /* Firefox */
+}
+
+.btn-confirm {
+  font-size: 18pt !important;
+  padding: 2%;
+  border-radius: 10px;
+}
+input[type="text"] {
+  font-size: 30px;
+}
+.sendBtn {
+  font-family: gilroyEB;
+  min-width: 164px!important;
+  line-height: 100px!important;
+  margin-top: 14px;
+  border-radius: 0!important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 92% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 70%, 92% 100%, 0% 100%);
+}
+button.tentar-btn {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #fff!important;
+  background-color: #cd0a2f;
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px)
+{
+  .page-header {padding: 0 45px;}
+  .sendBtn {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 98% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 98% 100%, 0% 100%);
+    padding: 10px 0;
+  }
+}

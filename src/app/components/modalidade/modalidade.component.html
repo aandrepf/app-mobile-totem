@@ -1,0 +1,26 @@
+<div class="page-header"
+[style.margin-bottom.px]="mostraNotCorrentistaFeatures() ? '130' : '32'">
+  <img class="icon-voltar" src="./assets/back.png" alt="Botão Voltar" (click)="previousPage()">
+  <p class="titulo-pagina">{{ mostraNotCorrentistaFeatures() ? '' : 'NÃO' }}</p>
+  <p class="titulo-pagina titulo-prioritario"
+  [style.font-size.pt]="mostraPrioritarioFeatures() ? '60' : '75'">CORRENTISTA</p>
+  <img src="./assets/picto_702.png" alt="pictograma" *ngIf="mostraPrioritarioFeatures()">
+</div>
+<div class="card card-block w-100 mx-auto">
+  <div class="row">
+    <div class="col-sm-12 cliente-usr-interaction">
+      <div [@changeDivSize]="stateOutros">
+        <div>
+          <button class="btn btn-primary btn-brand-continue" (click)="seleciontaTipoServico('gerente')">GERENTE</button>
+          <button class="btn btn-primary btn-brand-continue" (click)="seleciontaTipoServico('outros_servicos')">OUTROS SERVIÇOS</button>
+        </div>
+      </div>
+      <div [@changeDivSize]="stateBotoes">
+        <div>
+          <button class="btn btn-primary btn-brand-continue" *ngFor="let item of botoes"
+          (click)="print(item.categoria.id)">{{ item.descricao }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

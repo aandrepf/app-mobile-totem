@@ -1,0 +1,29 @@
+<ngx-spinner class="crm-wait-info" bdColor="rgba(255,255,255,1)" size="medium" color="#cd0a2f" type="ball-clip-rotate" fullscreen="true">
+  <p style="color: #cd0a2f">buscando informações...</p>
+</ngx-spinner>
+<div class="page-header">
+  <img class="icon-voltar" src="./assets/back.png" alt="Botão Voltar" (click)="previousPage()">
+  <p class="titulo-pagina">CORRENTISTA</p>
+  <p class="sub-titulo">PARA MELHOR ATENDE-LO <br>INFORME SUA AG/CC</p>
+</div>
+
+<form [formGroup]="crmForm" (ngSubmit)="onSubmit()" class="bond-form">
+  <div class="bond-full-width">
+    <input class="input-ag" #agInput type="text" placeholder="DIGITE SUA AGÊNCIA"
+      [matKeyboard]="'numberLayout'"
+      mask="0000"
+      minlength="4"
+      formControlName="ag"
+      autofocus/>
+  </div>
+  <div class="bond-full-width">
+    <input class="input-cc" #ccInput type="text" placeholder="DIGITE SUA CONTA"
+      [matKeyboard]="'numberLayout'"
+      mask="00000-0"
+      minlength="5"
+      formControlName="cc"/>
+  </div>
+  <mat-dialog-actions class="mat-dialog-footer" align="end">
+    <button mat-raised-button class="custom-btn" [disabled]="crmForm.invalid" class="sendBtn">CONFIRMAR</button>
+  </mat-dialog-actions>
+</form>

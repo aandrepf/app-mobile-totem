@@ -1,0 +1,10 @@
+<div class="erro-agencia-identify">
+  <h1 [style.color]="corTexto">Desculpe-nos!</h1>
+  <p [style.color]="corTexto">
+    {{ errorMsg }} <br>
+  </p>
+  <button mat-raised-button class="tentar-btn" (click)="tryAgain()"
+  [style.backgroundColor]="corBotao"
+  [style.color]="corTexto"
+  >TENTE NOVAMENTE</button>
+</div>

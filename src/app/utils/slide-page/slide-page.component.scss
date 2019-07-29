@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  overflow: hidden; /* Esconde tudo o que não cabe no componente */
+}
+.paineis {
+  height: 100%;
+  width: 200%; /* a div pai ocupa o dobro da largura do componente */
+  display: flex; /* todas as divs filhas em uma linha só */
+
+  div {
+    flex: 1; /* divide a largura entre as divs filhas */
+  }
+}

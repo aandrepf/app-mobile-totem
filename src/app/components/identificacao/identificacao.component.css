@@ -1,0 +1,143 @@
+.card {
+  border: 0px dotted #fff!important;
+  background-color: transparent!important;
+  margin: 0 auto 0px;
+  top: 0;
+  position:relative;
+}
+.col-sm-6.identificacao-wrapper {
+  margin: 0 auto;
+}
+p.identify-title {
+  font-family: ItauText_Lt;
+  margin: 197px 0 18px;
+  font-size: 80px;
+  letter-spacing: 0;
+}
+input, input:hover, input:active, input:focus, input::first-letter {
+  font-family: ItauText_Lt;
+  border: none!important;
+  border-bottom: 2px solid #f36d00!important;
+  padding: 0;
+  outline: none!important;
+  box-shadow: none;
+  margin: 0 auto 0;
+  background: transparent;
+  color: #fff;
+  font-size: 160px;
+  text-align: center;
+  border-radius: 0px;
+  width: 1350px;
+  height: 208px;
+  vertical-align: baseline;
+}
+p.info-phone {
+  font-family: ItauText_Lt;
+  margin: 30px 0;
+  font-size: 49px;
+  letter-spacing: -0.3px;
+}
+.form-control:disabled, .form-control {
+  background-color: transparent!important;
+}
+.numpad {
+  background-color: #fff;
+  padding: 130px 0 0;
+  width: 1295px!important;
+  position: relative;
+  margin: 0 auto 0;
+  bottom: 0;
+  z-index: 10;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+.col-sm-12.footer {
+  text-align: left;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+}
+.footer p {
+  font-family: ItauText_Lt;
+  margin: 0;
+  position: fixed;
+  bottom: 33px;
+  left: 70px;
+  font-size: 56px;
+}
+.footer p:hover {
+  cursor: pointer;
+}
+
+/* Large desktop */
+@media (min-width: 992px) and (max-width: 1366px){
+  p.identify-title {margin: 105px 0 18px;font-size: 52px;}
+  input, input:hover, input:active, input:focus, input::first-letter {
+    font-size: 100px;
+    width: 90%;
+    height: 108px;
+  }
+  .numpad {
+    height: 100%!important;
+    padding: 20px 0 0;
+    width: 65%!important;
+  }
+  p.info-phone {font-size: 35px;}
+  .footer p {top:20px;left: 20px;font-size: 26px;}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+  p.identify-title {margin: 175px 0 18px;font-size: 50px;}
+  input, input:hover, input:active, input:focus, input::first-letter {
+    font-size: 100px;
+    width: 100%;
+    height: 98px;
+  }
+  .numpad {
+    height: 100%!important;
+    padding: 30px 0 0;
+    width: 100%!important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  p.info-phone {font-size: 40px;}
+  .footer p {top:50px;left: 30px;font-size: 36px;}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  p.identify-title {margin: 540px 0 18px;font-size: 33px;}
+  input, input:hover, input:active, input:focus, input::first-letter {
+    font-size: 60px;
+    width: 95%;
+    height: 68px;
+  }
+  .numpad {
+    height: 460px!important;
+    padding: 30px 0 0;
+    width: 95%!important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  p.info-phone {font-size: 30px;}
+  .footer p {top:20px;left: 20px;font-size: 26px;}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  p.identify-title {margin: 475px 0 18px;font-size: 21px;}
+  input, input:hover, input:active, input:focus, input::first-letter {
+    font-size: 40px;
+    width: 100%;
+    height: 48px;
+  }
+  .numpad {
+    height: 520px!important;
+    padding: 30px 0 0;
+    width: 100%!important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  p.info-phone {font-size: 20px;}
+}

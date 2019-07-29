@@ -1,0 +1,19 @@
+<div class="page-header"
+[style.margin-bottom.px]="mostraPrioritarioFeatures() ? '32' : '210'">
+  <img class="icon-voltar" src="./assets/back.png" alt="Botão Voltar" (click)="previousPage()">
+  <p class="titulo-pagina titulo-prioritario"
+  [style.font-size.pt]="mostraPrioritarioFeatures() ? '60' : '75'">{{ montaTituloPagina() }}</p>
+  <img src="./assets/picto_702.png" alt="pictograma" *ngIf="mostraPrioritarioFeatures()">
+</div>
+<div class="card card-block w-100 mx-auto">
+  <div class="row">
+    <div class="col-sm-12 cliente-usr-interaction">
+      <button class="btn btn-primary btn-brand-continue" (click)="validaCliente(true)">CORRENTISTA</button>
+      <button class="btn btn-primary btn-brand-continue" (click)="validaCliente(false)">NÃO CORRENTISTA</button>
+      <div *ngIf="mostraPrioritarioFeatures()">
+        <button class="btn btn-primary btn-brand-continue" *ngFor="let item of botoes"
+        (click)="print(item.categoria.id)">{{ item.descricao }}</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<ngx-spinner class="crm-wait-info" bdColor="rgba(255,255,255,1)" size="medium" color="#cd0a2f" type="ball-clip-rotate" fullscreen="true">
+  <p style="color: #cd0a2f">cadastrando informações...</p>
+</ngx-spinner>
+<div class="page-header">
+  <img class="icon-voltar" src="{{ './assets/' + (fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'backprime': 'back') + '.png' }}" alt="Botão Voltar" (click)="previousPage()">
+  <p class="logo-cliente" id="crm2"></p>
+  <p class="titulo-pagina" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'">CORRENTISTA</p>
+  <p class="sub-titulo" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'">COMO DESEJA <br>SER CHAMADO(A)?</p>
+</div>
+<form [formGroup]="crmPFform" (ngSubmit)="onSubmit()" class="bond-form" *ngIf="!isEmpresa;else crmEmpresa">
+    <div class="bond-full-width">
+      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime': 'input-ag'" #ccInput type="text" placeholder="DIGITE SEU NOME"
+        [matKeyboard]="'upperCaseLayout'"
+        formControlName="nome"
+        autofocus/>
+    </div>
+    <div class="bond-full-width">
+      <input ValCpf [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime': 'input-cc'" #ccInput type="text" placeholder="DIGITE SEU CPF"
+        [matKeyboard]="'numberLayout'"
+        mask="000.000.000-00"
+        formControlName="cpf"/>
+        <small *ngIf="!crmPFform.get('cpf').valid && crmPFform.get('cpf').touched"
+        [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'form-text text-danger-prime': 'form-text text-danger'"><strong>O CPF INFORMADO É INVÁLIDO!</strong></small>
+    </div>
+  <mat-dialog-actions class="mat-dialog-footer" align="end">
+      <button mat-raised-button [disabled]="crmPFform.invalid"
+      [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'custom-btn sendBtn-prime': 'custom-btn sendBtn'">CONFIRMAR</button>
+  </mat-dialog-actions>
+</form>
+
+<ng-template #crmEmpresa>
+  <form [formGroup]="crmPJform" (ngSubmit)="onSubmit()" class="bond-form">
+    <div class="bond-full-width">
+      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime': 'input-ag'" #ccInput type="text" placeholder="DIGITE SUA RAZÃO SOCIAL"
+        [matKeyboard]="'upperCaseLayout'"
+        formControlName="razao"
+        autofocus/>
+    </div>
+    <div class="bond-full-width">
+      <input ValCnpj [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime': 'input-cc'" #ccInput type="text" placeholder="DIGITE SEU CNPJ"
+        [matKeyboard]="'numberLayout'"
+        mask="00.000.000/0000-00"
+        formControlName="cnpj"/>
+        <small *ngIf="!crmPJform.get('cnpj').valid && crmPJform.get('cnpj').touched"
+        [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'form-text text-danger-prime': 'form-text text-danger'"><strong>O CNPJ INFORMADO É INVÁLIDO!</strong></small>
+    </div>
+    <mat-dialog-actions class="mat-dialog-footer" align="end">
+      <button mat-raised-button [disabled]="crmPJform.invalid"
+      [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'custom-btn sendBtn-prime': 'custom-btn sendBtn'">CONFIRMAR</button>
+    </mat-dialog-actions>
+  </form>
+</ng-template>
+

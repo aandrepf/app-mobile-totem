@@ -1,0 +1,121 @@
+.row {
+  margin: 0 20px;
+}
+p.gerente-wait-text {
+  position: relative;
+  left: 28%;
+}
+.page-header {
+  width: 92%;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: block;
+  float: left;
+  margin: 0;
+  text-align: left;
+}
+.sub-page-header {
+  padding: 0 30px;
+}
+.sub-page-header img.icon-voltar {
+  float: right;
+  position: absolute;
+  top: 12px;
+  right: 28px;
+  width: 160px;
+}
+p.sub-titulo {
+  margin: 25px 90px 55px;
+  font-family: gilroyR;
+  font-size: 37pt;
+  line-height: 50pt;
+  text-align: left;
+}
+img {
+  width: 20%;
+  position: relative;
+  top: -25px;
+  right: -45px;
+}
+.col-12.back-btn {
+  text-align: left;
+}
+a.go-back {
+  text-decoration: none;
+}
+a.go-back:hover {
+  cursor: pointer;
+}
+.row {
+  margin: 0 20px;
+}
+p.back-btn {
+  float: left;
+  height: 70px;
+  width: 65px;
+  position: relative;
+  top: 0;
+  padding: 23px 0 0;
+  font-size: 80px;
+}
+.categorias-infos {
+  margin: 0 0 25px;
+}
+.col-categoria p {
+  margin: 0;
+  line-height: 40px;
+  font-size: 17px;
+  text-align: left;
+}
+.col-details i {
+  line-height: 40px;
+  font-size: 45px;
+  text-align: center;
+  color: #cd0a2f;
+  position: relative;
+  left: -15px;
+}
+span.title-gerente {
+  line-height: 40px;
+  font-size: 20px;
+  color: #cd0a2f !important;
+  font-weight: 700;
+}
+.col.col-9.col-categoria, .col.col-3.col-details {
+  padding: 0;
+}
+button.mat-mini-fab.mat-primary {
+  float: left;
+  position: absolute;
+  z-index: 9;
+  top: 120px;
+  left: 20px;
+  background: #ffffff;
+  color: #cd0a2f !important;
+}
+mat-card.example-card.mat-card.mat-card {
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 96% 100%, 0% 100%);
+  border-radius: 0;
+  min-height: 70px;
+}
+
+mat-card.example-card-prime.mat-card.mat-card {
+  color: #ffffff!important;
+  background-color: #18417c;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 96% 100%, 0% 100%);
+  border-radius: 0;
+  min-height: 70px;
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px)
+{
+  .col.col-9.col-categoria, .col.col-3.col-details {
+    padding: 20px 0;
+  }
+  mat-card.example-card.mat-card.mat-card[_ngcontent-c16] {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 98% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 98% 100%, 0% 100%);
+    min-height: 90px;
+  }
+}

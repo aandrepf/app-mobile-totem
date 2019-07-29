@@ -1,0 +1,11 @@
+<div>
+    <slide-page [painelAtivo]="esquerdaVisivel ? 'left' : 'right'">
+        <div painelEsquerdo>
+          <app-lista-categorias (transitionRight)="visivel($event)" (categoria)="recebeCategoria($event)"></app-lista-categorias>
+        </div>
+        <div painelDireito>
+          <app-lista-gerentes (transitionLeft)="visivel($event)" [categoriaId]="categoriaInfo"
+          (enviaGerenteSelecionado)="recebeDadosGerente($event)"></app-lista-gerentes>
+        </div>
+      </slide-page>
+</div>
