@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../material.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxInfiniteScrollerModule } from 'ngx-infinite-scroller';
 
 import { GerenteComponent } from './gerente.component';
 import { GerenciaService } from '../../services/gerente.service';
@@ -26,7 +28,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CommonModule,
     MaterialModule,
     PerfectScrollbarModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    InfiniteScrollModule,
+    NgxInfiniteScrollerModule
   ],
   declarations: [
     GerenteComponent,

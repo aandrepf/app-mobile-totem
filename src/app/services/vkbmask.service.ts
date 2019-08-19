@@ -1,9 +1,35 @@
-import { Injectable } from '@angular/core';
+import { CrmComponent } from './../components/crm/crm.component';
+import { Injectable, ViewChild, ElementRef } from '@angular/core';
+import { Global } from '../shared/global';
 
 @Injectable()
 export class VkbmaskService {
+    constructor() {}
 
-    constructor() { }
+    formatToAgencia(val: string) {
+      if(val !== null) {
+        let ret = val.replace(/(\d{4})\d+?$/, '$1');
+        let pad = '0000';
+        let ans = pad.substring(0, pad.length - ret.length) + ret;
+        console.log('VALOR AGENCIA EDITADO', ans);
+        this.getAGFormatada(ans);
+        return ret;
+      }
+    }
+
+    getAGFormatada(valor: string) {
+      return valor;
+    }
+
+    formatToConta(val: string) {
+      if (val !== null) {
+        let ret = val.replace(/(\d{7})\d+?$/, '$1');
+        let pad = '0000000';
+        let ans = pad.substring(0, pad.length - ret.length) + ret;
+
+        return ret;
+      }
+    }
 
     formatToName(val: string): string {
         let ret = val;

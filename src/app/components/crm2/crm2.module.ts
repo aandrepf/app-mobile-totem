@@ -1,8 +1,11 @@
+import { KeypadComponent } from './keypad/keypad';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../material.module';
 import { NgxMaskModule } from 'ngx-mask'
+import { NumPadComponent } from './numpad/numpad';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { MAT_KEYBOARD_LAYOUTS, MatKeyboardModule } from '@ngx-material-keyboard/core';
 import { Global } from './../../shared/global';
@@ -16,11 +19,14 @@ import { CrmService } from './../../services/crm.service';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    MatBottomSheetModule,
     MatKeyboardModule,
     NgxMaskModule
   ],
   declarations: [
-    Crm2Component
+    Crm2Component,
+    NumPadComponent,
+    KeypadComponent
   ],
   providers: [
     CrmService,

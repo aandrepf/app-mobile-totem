@@ -35,7 +35,8 @@
 
 /*
   ESTILOS INDEX.HTML
-  * {
+*/
+ * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -44,7 +45,6 @@
   user-select: none;
   cursor: none !important;
 }
-*/
 html, body {
   height: 100%;
   *background-color: #4a4a4a;
@@ -110,8 +110,8 @@ button.mat-raised-button.mat-info {
   left: 50%;
   margin: 0;
   position: absolute;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-80%);
+  transform: translate(-50%,-80%);
 }
 .loading-text {
   width: 92%;
@@ -130,7 +130,7 @@ button.mat-raised-button.mat-info {
   top: 46%!important;
 }
 
-.gerente-wait-info > .loading-text {
+.gerente-wait-info .loading-text {
   position: fixed;
   top: 39%!important;
   font-size: 29px;
@@ -144,8 +144,8 @@ button.mat-raised-button.mat-info {
 */
 .print-default-message {
   cursor: none!important;
-  margin: 80px auto;
-  padding: 210px 0;
+  margin: 50px auto;
+  padding: 170px 0;
   border: 1px solid transparent;
   float: left;
   display: block;
@@ -162,7 +162,7 @@ button.mat-raised-button.mat-info {
 }
 p.first-msg, p.warning-msg {cursor: none!important;margin: 25px 0 !important;}
 p.senha-msg:first-child {cursor: none!important;margin: 0 0 10px;}
-p.senha-msg:last-child {cursor: none!important;margin: -5px 5px 0;}
+p.senha-msg:last-child {cursor: none!important;margin: 20px 70px 0;}
 p.senha {
   cursor: none!important;
   font-size: 120px !important;
@@ -175,6 +175,19 @@ p.senha {
   font-size: 120px;
   margin: 0 auto 0;
   display: table;
+}
+.sendBtn {
+  color: #cd0a2f!important;
+  font-family: gilroyEB;
+  background-color: #ffffff;
+  max-width: 50%!important;
+  line-height: 90px!important;
+  margin-top: 75px!important;
+  border-radius: 0!important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  border-radius: 10px!important;
 }
 
 .mat-snack-bar-container {
@@ -254,7 +267,7 @@ mat-keyboard-container {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
   body {background-image: url('./assets/bg-vertical.jpg');}
-  .print-msg-wpr p {font-size:36px;line-height: 40px;}
+  .print-msg-wpr p {font-size:44px;line-height: 60px;}
   .print-msg-wpr i {font-size: 78px;}
 }
 

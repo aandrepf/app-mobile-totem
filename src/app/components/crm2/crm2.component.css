@@ -46,14 +46,18 @@ p.sub-titulo {
 .bond-full-width {
   width: 100%;
 }
-
+label {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
 input.input-ag, input.input-cc {
   width: 100%;
   padding: 16px 5px;
-  margin: 55px 0 34px;
+  margin: -13px 0 50px;
   background: transparent;
-  color: transparent;
-  text-shadow: 0 0 0 #ffffff;
+  color: #fff;
+  *text-shadow: 0 0 0 #ffffff;
   border-bottom: 2px solid #ffffff;
   border-top: 0px solid;
   border-left: 0px solid;
@@ -65,10 +69,10 @@ input.input-ag, input.input-cc {
 input.input-ag-prime, input.input-cc-prime {
   width: 100%;
   padding: 16px 5px;
-  margin: 55px 0 34px;
+  margin: -13px 0 50px;
   background: transparent;
-  color: transparent;
-  text-shadow: 0 0 0 #070707;
+  color: #070707;
+  *text-shadow: 0 0 0 #070707;
   border-bottom: 2px solid #070707;
   border-top: 0px solid;
   border-left: 0px solid;

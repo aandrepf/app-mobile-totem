@@ -17,14 +17,28 @@ export class ListaGerentesComponent implements OnChanges {
 
   public gerente: InfoGerente[];
   public codigoCategoria;
+  public isScroll: boolean;
+  public br: boolean = false;
 
-  constructor(private _atdo: AtendimentoService, private _route: Router, private spinner: NgxSpinnerService) {}
+  constructor(private _atdo: AtendimentoService, private _route: Router, private spinner: NgxSpinnerService) {
+  }
 
   ngOnChanges() {
     if (this.categoriaId !== undefined) {
       this.spinner.show();
       this.listaGerentes(this.categoriaId.categoria.tipoCategoria.trim());
+      let $card = document.querySelector<HTMLDivElement>('.card-gerente-list').offsetHeight;
+      console.log('height', $card);
+      this.isScroll = $card >= 850 ? true : false;
     }
+  }
+
+  onScrollUp() {
+    console.log('scrolled UP!!');
+  }
+
+  onScrollDown() {
+    console.log('scrolled down!!');
   }
 
   listaGerentes(letraCategoria: string) {
@@ -43,6 +57,7 @@ export class ListaGerentesComponent implements OnChanges {
         }, 2500);
       });
     } else {
+      this.br = true;
       setTimeout(() => {
         this.spinner.hide();
         const $body = document.querySelector('body');

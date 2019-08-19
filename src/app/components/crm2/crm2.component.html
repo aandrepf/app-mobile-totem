@@ -9,45 +9,53 @@
 </div>
 <form [formGroup]="crmPFform" (ngSubmit)="onSubmit()" class="bond-form" *ngIf="!isEmpresa;else crmEmpresa">
     <div class="bond-full-width">
-      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime': 'input-ag'" #ccInput type="text" placeholder="DIGITE SEU NOME"
-        [matKeyboard]="'upperCaseLayout'"
+      <label for="nome" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'"><strong>DIGITE SEU NOME</strong></label>
+      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime campo-ag': 'input-ag campo-ag'"
+        #nomeInput type="text"
         formControlName="nome"
-        autofocus/>
+        (focus)="toggleShowDiv('divA')"/>
     </div>
     <div class="bond-full-width">
-      <input ValCpf [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime': 'input-cc'" #ccInput type="text" placeholder="DIGITE SEU CPF"
-        [matKeyboard]="'numberLayout'"
-        mask="000.000.000-00"
-        formControlName="cpf"/>
+      <label for="nome" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'"><strong>DIGITE SEU CPF</strong></label>
+      <input ValCpf [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime campo-cc': 'input-cc campo-cc'"
+        #cpfInput type="text"
+        formControlName="cpf"
+        (focus)="toggleShowDiv('divB')"/>
         <small *ngIf="!crmPFform.get('cpf').valid && crmPFform.get('cpf').touched"
         [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'form-text text-danger-prime': 'form-text text-danger'"><strong>O CPF INFORMADO É INVÁLIDO!</strong></small>
     </div>
-  <mat-dialog-actions class="mat-dialog-footer" align="end">
-      <button mat-raised-button [disabled]="crmPFform.invalid"
-      [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'custom-btn sendBtn-prime': 'custom-btn sendBtn'">CONFIRMAR</button>
-  </mat-dialog-actions>
 </form>
 
 <ng-template #crmEmpresa>
   <form [formGroup]="crmPJform" (ngSubmit)="onSubmit()" class="bond-form">
     <div class="bond-full-width">
-      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime': 'input-ag'" #ccInput type="text" placeholder="DIGITE SUA RAZÃO SOCIAL"
-        [matKeyboard]="'upperCaseLayout'"
+      <label for="razao" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'"><strong>DIGITE SUA RAZÃO SOCIAL</strong></label>
+      <input [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-ag-prime campo-ag': 'input-ag campo-ag'"
+        #razaoInput type="text"
         formControlName="razao"
-        autofocus/>
+        (focus)="toggleShowDiv('divC')"/>
     </div>
     <div class="bond-full-width">
-      <input ValCnpj [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime': 'input-cc'" #ccInput type="text" placeholder="DIGITE SEU CNPJ"
-        [matKeyboard]="'numberLayout'"
-        mask="00.000.000/0000-00"
-        formControlName="cnpj"/>
+      <label for="cnpj" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': 'inherit'"><strong>DIGITE SEU CNPJ</strong></label>
+      <input ValCnpj [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'input-cc-prime campo-cc': 'input-cc campo-cc'"
+        #cnpjInput type="text"
+        formControlName="cnpj"
+        (focus)="toggleShowDiv('divD')"/>
         <small *ngIf="!crmPJform.get('cnpj').valid && crmPJform.get('cnpj').touched"
         [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'form-text text-danger-prime': 'form-text text-danger'"><strong>O CNPJ INFORMADO É INVÁLIDO!</strong></small>
     </div>
-    <mat-dialog-actions class="mat-dialog-footer" align="end">
-      <button mat-raised-button [disabled]="crmPJform.invalid"
-      [class]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? 'custom-btn sendBtn-prime': 'custom-btn sendBtn'">CONFIRMAR</button>
-    </mat-dialog-actions>
   </form>
 </ng-template>
 
+<div class="col-sm-12 numpad divA" [@slideInOut]="animationStateA">
+  <keypad (keyValue)="recebeValueNome($event)" (fechaPad)="recebeFechaA($event)"></keypad>
+</div>
+<div class="col-sm-12 numpad divB" [@slideInOut]="animationStateB">
+  <numpad (numValue)="recebeValueCPF($event)" (fechaPad)="recebeFechaB($event)" [config]="vkConfig"></numpad>
+</div>
+<div class="col-sm-12 numpad divC" [@slideInOut]="animationStateC">
+  <keypad (keyValue)="recebeValueRazao($event)" (fechaPad)="recebeFechaC($event)"></keypad>
+</div>
+<div class="col-sm-12 numpad divD" [@slideInOut]="animationStateD">
+  <numpad (numValue)="recebeValueCNPJ($event)" (fechaPad)="recebeFechaD($event)" [config]="vkConfig"></numpad>
+</div>

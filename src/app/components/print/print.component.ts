@@ -67,10 +67,12 @@ export class PrintComponent implements OnInit {
     this.infoPrint.categoriaId = this.fluxo.crm.idCategoria;
     this.infoPrint.idUsuarioEscolhido = this.fluxo.crm.idGerente;
 
-    this.txt = this.infoPrint.idUsuarioEscolhido !== 0 ? 'gerente' : 'atendente';
-
+    if(this.infoPrint.idUsuarioEscolhido !== 0) {
+      this.txt = 'Aguarde no espaço reservado para clientes Bradesco, logo o gerente virá até você.'
+    } else {
+      this.txt = 'Por favor, aguarde a chamada da sua senha no painel.'
+    }
     console.log('PARAMETROS PARA IMPRESSÃO', this.infoPrint);
-
     this.novaSenha(this.infoPrint);
   }
 
@@ -83,24 +85,24 @@ export class PrintComponent implements OnInit {
         this.printMsg = true;
 
         setTimeout(() => {
-          this.routingState.clearHistory();
-          this.route.navigate(['/welcome']);
-
-          const $body = document.querySelector('body');
-          $body.classList.remove('body-exclusive', 'body-prime', 'body-empresas');
-        }, 3000);
+          this.volarHome();
+        }, 8000);
       }, error => {
         this.waitMsg = false;
         this.errorMsg = true;
 
         setTimeout(() => {
-          this.routingState.clearHistory();
-          this.route.navigate(['/welcome']);
-          const $body = document.querySelector('body');
-          $body.classList.remove('body-exclusive', 'body-prime', 'body-empresas');
-        }, 3000);
+          this.volarHome();
+        }, 8000);
       });
     }, 3500);
+  }
+
+  volarHome() {
+    this.routingState.clearHistory();
+    this.route.navigate(['/welcome']);
+    const $body = document.querySelector('body');
+    $body.classList.remove('body-exclusive', 'body-prime', 'body-empresas');
   }
 
   montaBody() {

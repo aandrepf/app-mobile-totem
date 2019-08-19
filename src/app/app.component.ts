@@ -19,6 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private routingState: RoutingState,
     private _userIdle: UserIdleService) {
       this.routingState.loadRouting();
+      console.log('VERSÃO MOBILE', '1.3.3');
   }
 
   @HostListener('window:click') windowClick(): void { this._userIdle.resetTimer(); }

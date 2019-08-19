@@ -41,13 +41,48 @@ p.sub-titulo {
   width: 100%;
 }
 
-input.input-ag, input.input-cc {
+.bond-full-width label {
+  text-align: left;
+  width: 100%;
+  float: left;
+}
+
+input.input-ag {
   width: 100%;
   padding: 16px 5px;
-  margin: 55px 0 34px;
+  margin: 0px 0 50px;
   background: transparent;
-  color: transparent;
-  text-shadow: 0 0 0 #ffffff;
+  color: #fff;
+  *text-shadow: 0 0 0 #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  outline: none;
+}
+
+input.input-cc {
+  width: 100%;
+  display: block;
+  padding: 16px 5px;
+  margin: 55px 35px 55px 0;
+  background: transparent;
+  color: #fff;
+  *text-shadow: 0 0 0 #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  outline: none;
+}
+
+input.input-dv {
+  width: 100%;
+  padding: 16px 5px;
+  margin: -5px 0 34px;
+  background: transparent;
+  color: #fff;
+  *text-shadow: 0 0 0 #ffffff;
   border-bottom: 2px solid #ffffff;
   border-top: 0px solid;
   border-left: 0px solid;

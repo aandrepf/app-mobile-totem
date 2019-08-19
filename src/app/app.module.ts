@@ -60,7 +60,7 @@ import { AngularValidateBrLibModule } from 'angular-validate-br';
     DeviceDetectorModule.forRoot(),
     routing,
     // idle: 10 segundos, timeout: 15 segundos, ping: 120 segundos
-    UserIdleModule.forRoot({idle: 20, timeout: 15, ping: 120}),
+    UserIdleModule.forRoot({idle: 15, timeout: 15, ping: 120}),
     NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     AngularValidateBrLibModule

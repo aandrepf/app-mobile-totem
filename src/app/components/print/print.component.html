@@ -8,14 +8,18 @@
       </div>
 
       <div *ngIf="printMsg" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': '#FFFFFF'">
-        <p class="senha-msg">Obrigado. Sua senha é: </p>
-        <p class="senha">{{ senha }}</p>
-        <p class="senha-msg">Por favor, aguarde a chamada do {{ txt }}.</p>
+        <p class="senha-msg">Obrigado.</p>
+        <!--p class="senha">{{ senha }}</p-->
+        <p class="senha-msg">{{ txt }}</p>
       </div>
 
       <div *ngIf="errorMsg" [style.color]="fluxo.crm.idCategoria === 8 || fluxo.crm.idCategoria === 17 ? '#070707': '#FFFFFF'">
         <p class='warning-msg'>Sistema temporariamente indisponível! <br>Procure por um de nossos atendentes.</p>
         <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
       </div>
+
+      <mat-dialog-actions class="mat-dialog-footer" align="end" *ngIf="!waitMsg">
+        <button mat-raised-button class="custom-btn sendBtn" (click)="volarHome()">OK</button>
+      </mat-dialog-actions>
     </div>
 </div>

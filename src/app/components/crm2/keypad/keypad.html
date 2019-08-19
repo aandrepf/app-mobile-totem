@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-sm-12 key-pad">
+    <div class="row">
+      <div class="col-sm-1 btn-pad" (click)="addValue('Q')"><p>Q</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('W')"><p>W</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('E')"><p>E</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('R')"><p>R</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('T')"><p>T</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('Y')"><p>Y</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('U')"><p>U</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('I')"><p>I</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('O')"><p>O</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('P')"><p>P</p></div>
+      <div class="col-sm-1 btn-pad"><p><img class="key-delete" src="./assets/icons/deletar.svg" alt="delete" title="DELETAR" (click)="apagaValor()"></p></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('A')"><p>A</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('S')"><p>S</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('D')"><p>D</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('F')"><p>F</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('G')"><p>G</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('H')"><p>H</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('J')"><p>J</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('K')"><p>K</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('L')"><p>L</p></div>
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('Z')"><p>Z</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('X')"><p>X</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('C')"><p>C</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('V')"><p>V</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('B')"><p>B</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('N')"><p>N</p></div>
+      <div class="col-sm-1 btn-pad" (click)="addValue('M')"><p>M</p></div>
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+      <div class="col-sm-1 btn-pad btn-none" style="background-color: transparent;"><p>&nbsp;</p></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 btn-pad" (click)="addValue(' ')"><p><img src="./assets/icons/space-bar.svg" alt="space" title="ESPAÇO"></p></div>
+      <div class="col-sm-6 btn-pad btn-send" (click)="fecharPad()"><p><img src="./assets/icons/send.svg" alt="send" title="ENVIAR"></p></div>
+    </div>
+  </div>
+</div>

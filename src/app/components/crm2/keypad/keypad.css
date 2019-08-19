@@ -1,0 +1,95 @@
+.row {
+  margin: 0!important;
+}
+.key-pad {
+  padding: 0 110px;
+  background-color: #333;
+}
+.col-sm-1.btn-pad {
+  margin: 18px 8px;
+  background: #666;
+  max-width: 7%;
+  border-radius: 4px;
+}
+.col-sm-6.btn-pad {
+  background: #666;
+  max-width: 45%;
+  margin: 5px 18px 0;
+  border-radius: 7px;
+}
+.btn-none {
+  pointer-events: none;
+}
+.btn-pad p {
+  font-family: gilroyR;
+  color: #fff;
+  font-weight: 700;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 42px;
+}
+.btn-pad:hover {
+  cursor: pointer;
+  background-color: #999;
+}
+.btn-send{
+  background-color: #2B78FE!important;
+}
+.btn-send:hover{
+  background-color: rgb(65, 134, 252)!important;
+}
+img {
+  width: 45px;
+  position: relative;
+  top: -5px;
+}
+img.key-delete {
+  width: 43px!important;
+  position: absolute;
+  left: 3px;
+  top: 25px;
+}
+button.btn-brand-continue {
+  min-width: 770px;
+  box-shadow: none!important;
+  outline: none!important;
+  padding: 10px 0 10px;
+  display: block;
+  margin: 0 auto 0;
+  border-radius: 10px;
+  font-size: 34px;
+  line-height: 50px;
+  font-weight: 700;
+  background-color: #f36d00!important;
+  border-color: #f36d00!important;
+  margin-top: 10px;
+}
+
+/* Large desktop */
+@media (min-width: 992px) and (max-width: 1366px){
+  .key-pad {padding: 0;}
+  .btn-pad p {margin: 15px 0 10px;font-size: 22px;}
+  img {width: 42px;}
+  button.btn-brand-continue {min-width: 75%;padding: 5px 0 5px;font-size: 30px;line-height: 42px;margin-top: 0px;}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+  .key-pad {padding: 50px 0;}
+  .btn-pad p {margin: 18px 0 20px;font-size: 35px;}
+  button.btn-brand-continue {min-width: 530px;padding: 25px 0 26px;font-size: 40px;line-height: 42px;margin-top: 0px;}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .key-pad {padding: 0;}
+  .btn-pad {width: 33%;}
+  .btn-pad p {margin: 18px 0 20px;font-size: 25px;}
+  img {width: 48px;}
+  button.btn-brand-continue {min-width: 80%;padding: 15px 0 16px;font-size: 30px;line-height: 32px;margin-top: 10px;}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  button.btn-brand-continue {font-size: 25px;line-height: 28px;}
+}

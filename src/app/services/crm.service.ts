@@ -29,6 +29,7 @@ export class CrmService {
 
   public verificaCadastroUsuario(ag: string, conta: string): Observable<VerificaUsuario> {
     const body = JSON.stringify({ag: ag, cc: conta});
+    console.log(body);
     const url = `${this._config.appConfig.urlCrm}/${Global.IDENTIFICA_USUARIO}`;
     return this._http.post(url, body).pipe(
       map((res: VerificaUsuario) => {
@@ -48,7 +49,7 @@ export class CrmService {
   }
 
 
-  public validarAg(unidade: number): Observable<any> {
+  public validarAg(unidade: string): Observable<any> {
     const body = JSON.stringify({codUnidade: unidade});
     console.log(body);
     const url = `${this._config.appConfig.urlCrm}/${Global.UNIDADE_VALIDA}`;

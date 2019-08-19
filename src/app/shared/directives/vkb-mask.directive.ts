@@ -16,25 +16,24 @@ export class VkbMaskDirective implements OnInit, OnDestroy {
         const ctrl = this._ngControl.control;
         this._subscription = ctrl.valueChanges.subscribe(v => {
 
-            let val = '';
+            let val: any = '';
 
             switch (this.vkbMask) {
-                case 'name':
-                    val = this._service.formatToName(v);
+                case 'agencia':
+                    val = this._service.formatToAgencia(v);
                     break;
-                case 'cpf':
-                    val = this._service.formatToCpf(v);
-                    break;
-                default:
-                    val = v;
+                case 'conta':
+                    val = this._service.formatToConta(v);
                     break;
             }
 
             ctrl.setValue(val, { emitEvent: false });
 
             setTimeout(() => {
+              if(val !== undefined) {
                 this._elementRef.nativeElement.setSelectionRange(val.length, val.length);
                 this._elementRef.nativeElement.focus();
+              }
             }, 0);
 
         });
